@@ -1,5 +1,5 @@
 var numBox = prompt("Enter an even number from 16 till 64")
-
+var newColor = "rgb(131, 86, 32)"
 $(document).ready(function() {
 
     for (var i = 0; i < numBox * numBox; i++) {
@@ -37,7 +37,13 @@ $(document).ready(function() {
     })
 
     $("#changeHex").click(function(){
-      var newColor = prompt("Enter the name of color or its HEX value" , "Name of color or its HEX value including # goes here")
+      newColor = prompt("Enter the name of color or its HEX value" , "Name of color or its HEX value including # goes here")
+      $(".grid").mouseenter(function(){
+        $(this).css("background-color" , newColor)
+      })
+    })
+
+    $("#drawer").click(function(){
       $(".grid").mouseenter(function(){
         $(this).css("background-color" , newColor)
       })
