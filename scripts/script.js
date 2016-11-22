@@ -1,4 +1,4 @@
-var numBox = prompt("Enter a value between 16 to 32")
+var numBox = prompt("Enter an even number from 16 till 64")
 
 $(document).ready(function() {
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
         $(this).css("background-color", "rgb(131, 86, 32)")
     })
 
-    $(".mybutton").click(function() {
+    $("#resetbutton").click(function() {
         $(".grid").css("background-color", "white")
     })
 
@@ -29,4 +29,17 @@ $(document).ready(function() {
                 'background-color': 'rgba(61, 172, 28, 0.77)',
                 'color': '#000'  })
           })
+
+    $("#eraser").click(function(){
+      $(".grid").mouseenter(function(){
+        $(this).css("background-color" , "#fff")
+      })
+    })
+
+    $("#changeHex").click(function(){
+      var newColor = prompt("Enter the name of color or its HEX value" , "Name of color or its HEX value including # goes here")
+      $(".grid").mouseenter(function(){
+        $(this).css("background-color" , newColor)
+      })
+    })
 })

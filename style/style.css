@@ -27,9 +27,25 @@
   float: left;
 }
 
-.mybutton {
-  width: 105px;
+.thebuttons {
+  width: 640px;
   margin: auto;
+  align-items: center;
   margin-top: 50px;
   display: block;
+  padding-left: 250px;
+}
+
+.myfooter {
+  height: 50 px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(61, 172, 28, 0.77);
+  position: absolute;
+  bottom: 0px;
+  left: 0px
+}
+
+input button {
+  background-color: rgb(29, 250, 1);
 }
